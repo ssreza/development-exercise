@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Copernicus';
+  src: url('Copernicus-Heavy.eot'); /* IE9 Compat Modes */
+  src: url('Copernicus-Heavy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Copernicus-Heavy.woff') format('woff'), /* Modern Browsers */
+       url('Copernicus-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Copernicus-Heavy.svg#53d86533bbd20bc075f6ce29028572cc') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
