@@ -1,2 +1,4 @@
 .DS_Store
 */node-modules
+*/**/node-modules
+walmart_challenge/envDjango
