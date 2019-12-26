@@ -1,19 +1,6 @@
 import { isEmpty,deepCopy } from "../util";
 const apiPath = "http://localhost:8000";
-export   function getAll(type){
-    let url = `${apiPath}/api/${type}/`
-    return fetch(url)
-    .then((response)=>{
-        return response.json();
-    });
-}
-export   function getOne(type,id){
-    let url = `${apiPath}/api/${type}/${id}`;
-    return fetch(url)
-    .then((response)=>{
-        return response.json();
-    });
-}
+
 var sessionData={};
 var initialLoad = true;
 export function isIntialLoad(){
@@ -50,5 +37,43 @@ class Order {
     constructor(options){
         this.user_id=options.name;
         
+    }
+}
+
+export class ApiService{
+    static getAll(collection){
+        let url = `${apiPath}/api/${collection}/`
+        return fetch(url)
+        .then((response)=>{
+            return response.json();
+        });
+    }
+    static getOne(collection,id){
+        let url = `${apiPath}/api/${collection}/${id}`;
+        return fetch(url)
+        .then((response)=>{
+            return response.json();
+        });
+    }
+
+    static updateOne(collection, id,data){
+        let url = `${apiPath}/api/${collection}/${id}`
+        return fetch(url,{
+            headers: { "Content-Type": "application/json; charset=utf-8" },
+            method: 'PUT',
+            body: JSON.stringify(data)
+        }).then((response)=>{
+            return response.json();
+        });
+    }
+    static updateAll(collection,data){
+        let url = `${apiPath}/api/${collection}/multi_update/`
+        return fetch(url,{
+            headers: { "Content-Type": "application/json; charset=utf-8" },
+            method: 'PATCH',
+            body: JSON.stringify(data)
+        }).then((response)=>{
+            return response.json();
+        });
     }
 }

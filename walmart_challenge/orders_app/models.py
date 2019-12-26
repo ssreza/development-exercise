@@ -20,6 +20,7 @@ class DjangoMigrations(models.Model):
 
 class Items(models.Model):
     name = models.CharField(max_length=255)
+    created_at= models.DateTimeField(auto_now_add=True)
 
     class Meta:
         managed = False
@@ -29,6 +30,7 @@ class Items(models.Model):
 class OrderItems(models.Model):
     order = models.ForeignKey('Orders', models.DO_NOTHING)
     item = models.ForeignKey(Items, models.DO_NOTHING)
+    created_at= models.DateTimeField(auto_now_add=True)
 
     class Meta:
         managed = False
@@ -37,6 +39,7 @@ class OrderItems(models.Model):
 
 class Orders(models.Model):
     user = models.ForeignKey('Users', models.DO_NOTHING)
+    created_at= models.DateTimeField(auto_now_add=True)
 
     class Meta:
         managed = False
@@ -45,6 +48,7 @@ class Orders(models.Model):
 
 class Users(models.Model):
     name = models.CharField(max_length=50)
+    created_at= models.DateTimeField(auto_now_add=True)
 
     class Meta:
         managed = False
