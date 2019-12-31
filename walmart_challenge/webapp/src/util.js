@@ -1,3 +1,4 @@
+import moment from "moment";
 export function postData(url, data) {
 
     return fetch(url, {
@@ -22,6 +23,35 @@ export function deepCopy(value){
   else {
       return JSON.parse(JSON.stringify(value));
   } 
+} 
+
+
+export function sortArray(inputArray, property, isDateTime, direction) {
+    inputArray.sort(__ddsrt(property, isDateTime, direction))
+}
+
+function __ddsrt(property,isDateTime, direction) {
+    let sortOrder = 1;
+    if (direction) {
+        sortOrder = direction;
+    }
+    // if(property[0] === "-") {
+    //     sortOrder = sortOrder*-1;
+    //     property = property.substr(1);
+    // }
+    if(isDateTime){
+        return function (a,b) {
+            const propa= moment(a[property]);
+            const propb = moment(b[property]);
+
+            const result = (propb.isAfter(propa)) ? -1 : (propa.isAfter(propb)) ? 1 : 0;
+            return result * sortOrder;
+        }
+    }
+    return function (a,b) {
+        const result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+        return result * sortOrder;
+    }
 }
 export function getData(url) {
     

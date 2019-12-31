@@ -6,8 +6,11 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Home from "./Home";
+import ItemsView from "./ItemsView";
+import "./style.scss";
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import 'font-awesome/css/font-awesome.min.css';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 
 function TabPanel(props) {
@@ -52,14 +55,14 @@ function App() {
         <AppBar position="static">
           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                 <Tab label="Home"  />
-                <Tab label="Orders"/>
+                <Tab label="Items"/>
             </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
         <Home/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <h1>Orders</h1>
+        <ItemsView/>
       </TabPanel>
      
     </div>

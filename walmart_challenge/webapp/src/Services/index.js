@@ -55,7 +55,14 @@ export class ApiService{
             return response.json();
         });
     }
-
+    static deleteOne(collection, id){
+        let url = `${apiPath}/api/${collection}/${id}/`
+        return fetch(url,{
+            method: 'DELETE',
+        }).then((response)=>{
+            return response
+        });
+    }
     static updateOne(collection, id,data){
         let url = `${apiPath}/api/${collection}/${id}`
         return fetch(url,{

@@ -28,10 +28,9 @@ class Items(models.Model):
 
 
 class OrderItems(models.Model):
-    order = models.ForeignKey('Orders', models.DO_NOTHING)
-    item = models.ForeignKey(Items, models.DO_NOTHING)
+    order = models.ForeignKey('Orders',  on_delete=models.CASCADE)
+    item = models.ForeignKey(Items,  on_delete=models.CASCADE)
     created_at= models.DateTimeField(auto_now_add=True)
-
     class Meta:
         managed = False
         db_table = 'order_items'
@@ -40,6 +39,7 @@ class OrderItems(models.Model):
 class Orders(models.Model):
     user = models.ForeignKey('Users', models.DO_NOTHING)
     created_at= models.DateTimeField(auto_now_add=True)
+    approved= models.IntegerField(default=0)
 
     class Meta:
         managed = False

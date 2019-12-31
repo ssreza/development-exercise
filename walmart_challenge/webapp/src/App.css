@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+table td.delete-column{
+  text-align:"center";
+  cursor:"pointer";
+}
