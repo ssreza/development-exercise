@@ -20,7 +20,7 @@ class DjangoMigrations(models.Model):
 
 class Items(models.Model):
     name = models.CharField(max_length=255)
-    created_at= models.DateTimeField(auto_now_add=True)
+    created_at= models.DateTimeField(auto_now_add=True) #added created at 
 
     class Meta:
         managed = False
@@ -30,8 +30,8 @@ class Items(models.Model):
 class OrderItems(models.Model):
     order = models.ForeignKey('Orders',  on_delete=models.CASCADE)
     item = models.ForeignKey(Items,  on_delete=models.CASCADE)
-    count =models.IntegerField()
-    created_at= models.DateTimeField(auto_now_add=True)
+    count =models.IntegerField() # added a count feature just so orders can have multiple items
+    created_at= models.DateTimeField(auto_now_add=True) #added created at 
     class Meta:
         managed = False
         db_table = 'order_items'
@@ -39,7 +39,7 @@ class OrderItems(models.Model):
 
 class Orders(models.Model):
     user = models.ForeignKey('Users',  on_delete=models.CASCADE)
-    created_at= models.DateTimeField(auto_now_add=True)
+    created_at= models.DateTimeField(auto_now_add=True) #added created at 
 
     class Meta:
         managed = False
@@ -48,7 +48,7 @@ class Orders(models.Model):
 
 class Users(models.Model):
     name = models.CharField(max_length=50)
-    created_at= models.DateTimeField(auto_now_add=True)
+    created_at= models.DateTimeField(auto_now_add=True) #added created at 
 
     class Meta:
         managed = False

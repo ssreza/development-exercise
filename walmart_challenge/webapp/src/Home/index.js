@@ -4,7 +4,7 @@ import React from 'react';
 import '../App.css';
 import {pluck_level_one, sortArray,deepCopy,isPositive} from "../util";
 import moment from "moment";
-import { ApiService, getSessionData } from '../Services';
+import { ApiService } from '../Services';
 
 class Home extends React.Component {
     constructor(props){
@@ -14,7 +14,6 @@ class Home extends React.Component {
         this.addOrder = this.addOrder.bind(this);
         this.editOrder = this.editOrder.bind(this);
         this.submit = this.submit.bind(this);
-        let sessionData = getSessionData();        
         this.state={
           loaded_data_types:[],
           users:["all"],
@@ -114,7 +113,7 @@ class Home extends React.Component {
       
      
     }
-    getData(components){
+    getData(components){ // get data of an array of collections from backend
       let self =this;
       this.setState({loading:true});
       let  length= components.length;
@@ -442,7 +441,7 @@ class Home extends React.Component {
                   <p>Items: {itemsToDisplay.map(x=> x.name+" ")} </p>
                   <br/>
                   <button className="button is-danger" onClick={e => {this.submit({type:"delete",collection:"orders", id:order.id });}} style={{"margin-right":"10px"}}>Delete</button>
-                    <button className="button"  onClick={e => this.setState({prompt:""}) } >cancel</button>
+                    <button className="button"  onClick={e => this.setState({prompt:""}) } >Cancel</button>
               </div>
             </div>
           </div>);
