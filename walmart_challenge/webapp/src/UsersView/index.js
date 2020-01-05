@@ -4,11 +4,11 @@ import '../App.css';
 import {pluck_level_one, sortArray,deepCopy} from "../util";
 import moment from "moment";
 import { ApiService } from '../Services';
-export default class ItemsView extends React.Component {
+export default class UsersView extends React.Component {
     constructor(props){
         super(props);
         this.getData = this.getData.bind(this);
-        this.addItem = this.addItem.bind(this);
+        this.addUser = this.addUser.bind(this);
 
         this.state={
           loaded_data_types:[],
@@ -16,13 +16,11 @@ export default class ItemsView extends React.Component {
           orders: [],
           items:[],
           order_items:[],
-          filtered_items:[],
-          selected_user:0,
-          selected_order:null,
-          selected_item:null,
+          filtered_users:[],
+          selected_user:null,
           loading:false,
           prompt:"",
-          new_item:{
+          new_user:{
             name:""
           }
         }
@@ -34,9 +32,6 @@ export default class ItemsView extends React.Component {
           ApiService.getAll(type).then((data)=>{
             let payload = {};
             payload[type]=data;
-            if(type == "users"){
-              payload[type].push({id:0, name:"All", created_at:""});
-            }
             payload["filtered_" +type] = deepCopy(payload[type]);
             let {loaded_data_types}  = self.state;
             if(loaded_data_types.indexOf(type)<0){
@@ -54,32 +49,32 @@ export default class ItemsView extends React.Component {
         
       }
     componentWillMount(){
-      this.getData(["items"])
+      this.getData(["users"])
     }
 
-    addItem(){
-      let {new_item}=this.state;
+    addUser(){
+      let {new_user}=this.state;
       let self= this;
       self.setState({loading:true});
-      ApiService.createOne("items", {name:new_item.name}).then(res=>{
-        self.getData(["items"]);
-        let {new_item}=self.state;
-        new_item.open =false;
-        self.setState({new_item:new_item});
+      ApiService.createOne("users", {name:new_user.name}).then(res=>{
+        self.getData(["users"]);
+        let {new_user}=self.state;
+        new_user.open =false;
+        self.setState({new_user:new_user});
       });
     }
     render(){
-      let {users, filtered_items,items,order_items, new_item,prompt, loading}= this.state;
+      let {users, filtered_users,items,order_items, new_user,prompt, loading}= this.state;
 
-      sortArray(filtered_items,  "name");
-      let ItemsList = filtered_items.map((item)=>{
+      sortArray(filtered_users,  "name");
+      let ItemsList = filtered_users.map((user)=>{
       
-        let displayCreated = moment(item.created_at).format("h:mm a, MMM DD");
-        return(<tr key={item.id} onClick={()=>{
-              this.setState({viewItem:item});
+        let displayCreated = moment(user.created_at).format("h:mm a, MMM DD");
+        return(<tr key={user.id} onClick={()=>{
+              this.setState({viewItem:user});
             }}>
-          <td>{item.name}</td>
-          <td>{item.id}</td>
+          <td>{user.name}</td>
+          <td>{user.id}</td>
           <td>{displayCreated}</td>
           <td onClick={()=>{
               let prompt=(<div className="modal is-active">
@@ -90,9 +85,9 @@ export default class ItemsView extends React.Component {
                     <br/>
                     <button className="button is-danger" onClick={e => {
                         let self = this;
-                       ApiService.deleteOne("items",item.id).then((res)=>{
+                       ApiService.deleteOne("users",user.id).then((res)=>{
                          self.setState({prompt:""})
-                         self.getData(["items"]);
+                         self.getData(["users"]);
                        }).catch(err=>{
                          console.error(err);
                        });
@@ -108,41 +103,41 @@ export default class ItemsView extends React.Component {
           </td>
           </tr>);
       });
-      let createItemForm=(<div className="box">
+      let createUserForm=(<div className="box">
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
               <input className="input" type="text" placeholder="New Item" onChange={(e)=>{
-                new_item.name = e.target.value;
-                this.setState({new_item:new_item});
+                new_user.name = e.target.value;
+                this.setState({new_user:new_user});
               }}/>
             </div>
           </div>
           <div className="field is-grouped">
                   <div className="control">
-                    <button className="button is-link" onClick={()=> this.addItem()}>Submit</button>
+                    <button className="button is-link" onClick={()=> this.addUser()}>Submit</button>
                   </div>
                   <div className="control">
                     <button className="button is-link is-light" onClick={(e)=> {
                       e.preventDefault();
-                      new_item.open=false;
-                      this.setState({new_item:new_item});
+                      new_user.open=false;
+                      this.setState({new_user:new_user});
                     }}>Cancel</button>
                   </div>
                 </div>
         </div>)
         return (<div className="container">
            <div>
-              <h2 className="level-left">View, Create or Update items</h2>
+              <h2 className="level-left">Delete, Create or Update users</h2>
             <span className="level-left " onClick={(e)=> {
               e.preventDefault();
-              new_item.open=true;
-              this.setState({new_item:new_item});
+              new_user.open=true;
+              this.setState({new_user:new_user});
             }} style={{"cursor":"pointer"}}>
-              <i className="fa fa-plus"></i><span style={{"margin":"5px 5px"}}>Create an Item</span>
+              <i className="fa fa-plus"></i><span style={{"margin":"5px 5px"}}>Create an User</span>
             </span>
             </div>
-            {new_item.open && createItemForm}
+            {new_user.open && createUserForm}
             <br/>
             <div className="data-table">
               {loading && (<div className="loader-class">
@@ -151,8 +146,8 @@ export default class ItemsView extends React.Component {
               {!loading && (<table className="table">
                 <thead>
                   <tr>
-                    <td>Item Name</td>
-                    <td>Item Id</td>
+                    <td>User Name</td>
+                    <td>User Id</td>
                     <td>Created</td>
                     <td>Delete</td>
                   </tr>

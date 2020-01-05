@@ -12,6 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import 'font-awesome/css/font-awesome.min.css';
 import 'react-bulma-components/dist/react-bulma-components.min.css';
+import UsersView from './UsersView';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,6 +57,7 @@ function App() {
           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                 <Tab label="Home"  />
                 <Tab label="Items"/>
+                <Tab label="Users"/>
             </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -63,6 +65,9 @@ function App() {
       </TabPanel>
       <TabPanel value={value} index={1}>
         <ItemsView/>
+      </TabPanel>
+      <TabPanel value={value} index={2}>
+        <UsersView/>
       </TabPanel>
      
     </div>

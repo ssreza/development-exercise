@@ -64,10 +64,20 @@ export class ApiService{
         });
     }
     static updateOne(collection, id,data){
-        let url = `${apiPath}/api/${collection}/${id}`
+        let url = `${apiPath}/api/${collection}/${id}/`
         return fetch(url,{
             headers: { "Content-Type": "application/json; charset=utf-8" },
             method: 'PUT',
+            body: JSON.stringify(data)
+        }).then((response)=>{
+            return response.json();
+        });
+    }
+    static createOne(collection,data){
+        let url = `${apiPath}/api/${collection}/`
+        return fetch(url,{
+            headers: { "Content-Type": "application/json; charset=utf-8" },
+            method: 'POST',
             body: JSON.stringify(data)
         }).then((response)=>{
             return response.json();

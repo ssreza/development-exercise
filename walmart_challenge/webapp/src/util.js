@@ -26,6 +26,17 @@ export function deepCopy(value){
 } 
 
 
+export function isPositive(num){
+    num = Number(num);
+    if(!num || isNaN(num)){
+        return 0;
+    }
+    else if(num<0){
+        return 0;
+    }
+    return num;
+}
+
 export function sortArray(inputArray, property, isDateTime, direction) {
     inputArray.sort(__ddsrt(property, isDateTime, direction))
 }

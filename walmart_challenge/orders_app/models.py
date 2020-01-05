@@ -30,6 +30,7 @@ class Items(models.Model):
 class OrderItems(models.Model):
     order = models.ForeignKey('Orders',  on_delete=models.CASCADE)
     item = models.ForeignKey(Items,  on_delete=models.CASCADE)
+    count =models.IntegerField()
     created_at= models.DateTimeField(auto_now_add=True)
     class Meta:
         managed = False
@@ -37,9 +38,8 @@ class OrderItems(models.Model):
 
 
 class Orders(models.Model):
-    user = models.ForeignKey('Users', models.DO_NOTHING)
+    user = models.ForeignKey('Users',  on_delete=models.CASCADE)
     created_at= models.DateTimeField(auto_now_add=True)
-    approved= models.IntegerField(default=0)
 
     class Meta:
         managed = False

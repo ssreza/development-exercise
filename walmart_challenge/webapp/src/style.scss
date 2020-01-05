@@ -34,5 +34,52 @@ $white: #fff;
 .is-loading {
   position: relative;
 }
+.create-order-form {
+  .add-items{
+    .input.new-item-count{
+      width:auto;
+      margin-left:5px;
+    }
+    .new-item{
+      .button{
+        cursor: pointer;
+        margin-right:5px;
+      }
+    }
+    .order-items{
+      margin-top:10px;
+      .tag{margin-right:10px;}
+      i{
+        margin-left:5px;
+        cursor:pointer;
+      }
+    }
+  }
+}
+.new-item {
+  margin-bottom: 5px;
+  .select,.button{
+    margin-right:5px;
+  }
+  .input.new-item-count{
+    width: auto;
 
-
+  }
+  .order-items{
+    margin-top:10px;
+    .tag{
+      margin-right:5px;
+      padding:15px;
+      .fa-times{
+        margin-left:5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.makeStyles-root-1{
+  .MuiAppBar-colorPrimary {
+    color: #fff;
+    background-color: #3273dc;
+}
+}
