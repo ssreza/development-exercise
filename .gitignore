@@ -2,3 +2,4 @@
 */node-modules
 */**/node-modules
 walmart_challenge/envDjango
+walmart_challenge/**/__pycache__/
