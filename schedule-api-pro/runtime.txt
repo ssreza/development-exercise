@@ -22,7 +22,7 @@ futures==3.0.5
 go-vncdriver==0.4.17
 gunicorn==19.6.0
 gym==0.5.6
-httplib2==0.9.2
+httplib2==0.18.0
 import-string==0.1.0
 incremental==16.10.1
 ipaddress==1.0.17
