@@ -1,0 +1,10 @@
+{
+  "generator-flask-api": {
+    "appName": "schedule_api",
+    "database": "postgresql",
+    "databaseMapper": "sqlalchemy",
+    "versioningScheme": "none",
+    "currentVersion": "",
+    "urlPrefix": "/api"
+  }
+}

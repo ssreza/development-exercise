@@ -1,0 +1,7 @@
+# Elastic Beanstalk Files
+_pycache_
+*.pyc
+me.json
+static/lib
+static/node_modules
+env/
