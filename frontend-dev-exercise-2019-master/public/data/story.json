@@ -1,0 +1,207 @@
+{
+    "frames": [
+
+        {
+            "title": "Welcome Stranger",
+            "body": "<p><b>The most dangerous moment in any story is the beginning.</b></p><p>As the story opens, every ending is equally possible, every path unwalked, every question not only unanswered, but unasked. The unread story is infinite possibility.</p><p>Are you brave enough to begin? If not, remain safe. No one will think any less of you.</p>",
+            "img": "img/09.png",
+            "colors": {
+                "bg": "#FFC100",
+                "text": "#916F04"
+            },
+            "buttons": [
+                {
+                    "text": "Begin",
+                    "linkindex": 1
+                }
+            ]
+        },
+
+        {
+            "title": "The Garden",
+            "body": "<p>You find yourself standing in a beautiful garden. It teems with all the birds of the air, and all of the creatures of the Earth, and every good thing that grows. As you explore, you feel an incredible sense of peace and rightness, as if the garden had been created just for you.</p><p>This is the place you belong. Still, you are restless and lonely. You begin to explore your surroundings. At the western edge of the garden, there is a gate.</p><p><b>Do you walk through?</b></p>",
+            "colors": {
+                "bg": "#04D045",
+                "text": "#05882F"
+            },
+            "buttons": [
+                {
+                    "text": "Yes",
+                    "linkindex": 2
+                },
+                {
+                    "text": "No",
+                    "linkindex": 3
+                }
+            ]
+        },
+
+        {
+            "title": "The Dark Forest",
+            "body": "<p>Gates, like books, are meant to be opened, and you would never be truly content if you did not know what lay on the other side. You pass through the gate and enter into a dark forest. You hesitate for a moment, look back, but the forest stretches behind you as if the garden had never been.</p><p>You continue on. Shadows deepen. An owl calls. Something cries out at a distance and is silenced. You grow chilled, and your feet develop a talent for finding uneven spots of ground, tree roots, and rocks. After the third time you fall, you lean against the very tree whose roots last tangled your feet. The bark prickles and rubs against your back, but it is a welcome distraction from your bruised knees and skinned palms. Your bones are weary and your muscles ache.</p><p>You crave sleep. A brief rest to fortify yourself for your journey. <b>Do you close your eyes?</b></p>",
+            "colors": {
+                "bg": "#3F524F",
+                "text": "#151F1E"
+            },
+            "buttons": [
+                {
+                    "text": "Yes",
+                    "linkindex": 4
+                },
+                {
+                    "text": "No",
+                    "linkindex": 5
+                }
+            ]
+        },
+
+        {
+            "title": "A New Eden?",
+            "body": "<p>You wish to see more of the garden before you leave its bounds. Soon, you are glad you have chosen as you did, for you find the perfect companion for all your days and nights. You come to believe you have found a new Eden, as well. It seems impossible for a place so perfect to be other than Paradise. When they are born, you name your children Kane and Abelle.</p><p><b>This will prove to be a mistake.</b></p>",
+            "img": "img/03.png",
+            "colors": {
+                "bg": "#E0072F",
+                "text": "#680013"
+            },
+            "buttons": [
+                {
+                    "text": "Start Over",
+                    "linkindex": 0
+                }
+            ]
+        },
+
+        {
+            "title": "No Return",
+            "body": "<p>You close your eyes, and drift into sleep. When you awaken, you are in your own bed. The previous events were a dream, which has already begun to fade.</p><p>You spend the rest of your life trying to return to the winding path in the dark forest.</p><p><b>You never will.</b></p>",
+            "img": "img/10.png",
+            "colors": {
+                "bg": "#E0072F",
+                "text": "#680013"
+            },
+            "buttons": [
+                {
+                    "text": "Start Over",
+                    "linkindex": 0
+                }
+            ]
+        },
+
+        {
+            "title": "The Quill and Ink",
+            "body": "<p>You scrub your hands across your eyes and push yourself back to your feet. The path takes you on a short, downhill curve, and winds around to the door of an inn. The Quill and Ink, reads the sign over the door. You smile, and enter.</p><p>Inside, there is warmth, the hearty scent of food, and a group of people singing songs both off-key and bawdy.</p><p>You slide seamlessly into the small community, and feel refreshed after you have shared a meal and stood a round of drinks.</p><p>Eventually, you notice the singing has died down, replaced by a rapt silence. There is a knot of people wound tight around the fire, telling stories. At first, you simply listen, but then you are asked to tell a tale of your own. It is the tale, not the coin, that will pay your shelter for the night.</p><p><b>Do you tell a story?</b></p>",
+            "colors": {
+                "bg": "#DC701D",
+                "text": "#803A04"
+            },
+            "buttons": [
+                {
+                    "text": "Yes",
+                    "linkindex": 6
+                },
+                {
+                    "text": "No",
+                    "linkindex": 7
+                }
+            ]
+        },
+
+        {
+            "title": "The Last Story",
+            "body": "<p>You are warm and happy, and just drunk enough to think that telling a story is something you can do. You invoke the muse, and she speaks through you. When you finish, only the crackling of the fire breaks the silence. You watch as, next to you, a single tear trickles down a perfect cheek.</p><p><b>It is the last story you will ever tell.</b></p>",
+            "img": "img/02.png",
+            "colors": {
+                "bg": "#E0072F",
+                "text": "#680013"
+            },
+            "buttons": [
+                {
+                    "text": "Start Over",
+                    "linkindex": 0
+                }
+            ]
+        },
+
+        {
+            "title": "The Ring of Stones",
+            "body": "<p>The only story you know is your own, you say, and you must continue on to know how it ends. You make your excuses, and stand one more round before you leave to ensure there will be no hurt feelings, and, more importantly, no knives in the back as you walk through the door. The air is crisp, and you are refreshed. The moon limns the trees in silver, and makes clear your path. You hear music, so beautiful that at first you wonder if you are dreaming. The pound of the drums speeds the pulse of your heart and the skirl of the strings pulls you through the night.</p><p>By the time you reach the standing stones, you are very nearly dancing down the path. Inside the ring of stones, the dancers spin and leap, a bright chaos of form and shape, carried along by an exultation of song. You want, as you cannot remember wanting anything, to cross into the stone circle and join. <b>Do you?</b></p>",
+            "colors": {
+                "bg": "#E5EAEB",
+                "text": "#83969A"
+            },
+            "buttons": [
+                {
+                    "text": "Yes",
+                    "linkindex": 8
+                },
+                {
+                    "text": "No",
+                    "linkindex": 9
+                }
+            ]
+        },
+
+        {
+            "title": "The Eternal Dance",
+            "body": "<p>As you step through the ring, every hair on your body stands as if electrified. Your feet begin to move in a complex pattern you were never taught, but now know in your blood.</p><p>You do not wish to ever stop dancing.</p><p><b>It is unlikely you ever will.</b></p>",
+            "img": "img/06.png",
+            "colors": {
+                "bg": "#E0072F",
+                "text": "#680013"
+            },
+            "buttons": [
+                {
+                    "text": "Start Over",
+                    "linkindex": 0
+                }
+            ]
+        },
+
+        {
+            "title": "Staircase of Life",
+            "body": "<p>You linger, just for a while, held by the unaccustomed beauty of the music. You watch the faces of the dancers, and wonder if it is joy that holds their mouths wide, burns their eyes bright. You cannot tell.</p><p>You decide you would rather choose your own steps, and so you turn away. At first, your feet seem heavy, not quite your own, but as you continue to walk, your steps become easier.</p><p>You believe that you are lucky, that you have continued to escape fates you would rather not own, and so you do not concern yourself with the rain that has begun to fall.</p><p>But the soft trickle becomes a pelting, and you duck into a crevice in the hillside. The interior of the hill opens up before you like a dark cathedral. A staircase, worn into the rock by millennia of pilgrim feet, rings the edge of the space and spirals downward.</p><p>You walk down the stairs, and as you do, memories unweave inside your head. The best and worst moments of your life play out, with a clarity they did not have when you first experienced them.</p><p>But there is something else. Perhaps. A second set of footsteps on the stairs. A whisper, a bare rustle in the dark. Easy enough to dismiss, to pretend that you do not feel the weight of a presence in the darkness behind you.</p><p>The spiral of the staircase becomes tighter, inexorable. The following tread impossible to ignore. The steps come a half-beat after yours, a shadow’s echo.</p><p>You pause, hoping whoever—and, oh, how you hope it is a whoever, here in the dark under the hill—will continue on past you, but the steps pause as well.</p><p>Surely, you think, if it had meant to hurt you, surely it would already have done that. Knowing would be better than imagining an expanding catalogue of horrors.</p><p><b>Do you turn to look back?</b></p>",
+            "colors": {
+                "bg": "#142CE0",
+                "text": "#0A1355"
+            },
+            "buttons": [
+                {
+                    "text": "Yes",
+                    "linkindex": 10
+                },
+                {
+                    "text": "No",
+                    "linkindex": 11
+                }
+            ]
+        },
+
+        {
+            "title": "The Beginning",
+            "body": "<p>You’ve been reading the alternate endings, haven’t you? Of course I know. I know everything that happens in all of the stories I hold.</p><p>You feel a pulling, and then are buffeted by a whirlwind. You hear something tear, feel a page come loose from your bindings.</p><p>You find yourself back at the beginning, holding a book.</p><p><b>You open the cover. Once upon a time.</b></p>",
+            "img": "img/11.png",
+            "colors": {
+                "bg": "#E0072F",
+                "text": "#680013"
+            },
+            "buttons": [
+                {
+                    "text": "Start Over",
+                    "linkindex": 0
+                }
+            ]
+        },
+
+        {
+            "title": "The End",
+            "body": "<p>You continue walking, three steps more. Then a hand slips into yours, and the story ends as all stories must: with the snip of a thread and the crossing of a river.</p><p>You pay the ferryman with coins plucked from your own eyelids.</p><p><b>You pass beyond the realm of the page.</b></p>",
+            "img": "img/01.png",
+            "colors": {
+                "bg": "#00DDB6",
+                "text": "#088770"
+            },
+            "buttons": []
+        }
+
+    ]
+}

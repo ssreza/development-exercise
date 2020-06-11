@@ -1,0 +1,149 @@
+
+
+body {
+    // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    // Helvetica, Roboto, Arial, sans-serif;
+    display: grid;
+    margin:0px;
+    .outer-background{
+        height: 100vh;
+        display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .inner-background{
+        width: 90%;
+        height: 90%;
+        
+    }
+ .loading-screen{
+    .outer-background{
+        background-color: #FFC100;
+        .inner-background{
+            background-color: #916F04;
+            color:  #FFC100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+        }
+    }
+     
+ }
+ .center-text {
+     text-transform: uppercase;
+     font-size: 5em;
+    font-weight: 900;
+ }
+ .story-board{
+     .inner-background{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .container{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+        .border{
+            height: 10px;
+           
+        }
+        .bottom-border{
+            position: relative;
+            margin-top: 84vh;
+            margin-right: 10%;
+            margin-left:6vw;
+            width: 86vw;
+            .border{
+                display: inline-block;
+                width: 63vw;
+                position: relative;
+                left:4vw;
+            }
+        }
+        .left-border{
+            position: absolute;
+            top: 5vh;
+            height: 90vh;
+            width: 10px;
+            margin-left:5vw;
+        }
+        .top-border{
+            .border{
+                display: inline-block;
+                width: 84vw;
+                
+            }
+            margin-top: 3vh;
+            margin-left: 5vw;
+        }
+        .right-border{
+            div{
+                display: inline-block;
+            }
+            width: 100%;
+            position: absolute;
+            top: 2vh;
+            right: 7vw;
+            .border{
+                height: 84vh;
+                width: 10px;
+                position: relative;
+                float: right;
+                margin-top: 9vh;
+                right: -29px;
+
+            }
+        }
+        .action-btn{
+            cursor: pointer;
+            font-size: 3.5em;
+            font-weight: 800;
+            top: 0vh;
+            display: inline-block;
+            position: relative;
+            &.button-one{
+            }
+            &.button-two{
+                left: 5vw;
+            }
+        }
+        .page-number{
+            font-size: 4em;
+            font-weight: 800;
+            float:right;
+        }
+     }
+     .title{
+        text-transform: uppercase;
+         font-size: 5em;
+         font-weight: 900;
+         text-align: center;
+
+     }
+     .body-content{
+         width: 70%;
+         margin-left: auto;
+         margin-right: auto;
+         div{
+             display: inline-block;
+             width: 45%;
+             margin:10px;
+            vertical-align: middle;
+         }
+         .body-text{
+             font-size: 1.5em;
+         }
+         .image{
+             img{
+                width: 100%;
+
+             }
+         }
+     }
+ }
+}

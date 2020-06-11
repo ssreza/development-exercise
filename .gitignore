@@ -1,5 +1,5 @@
 .DS_Store
 */node-modules
 */**/node-modules
-walmart_challenge/envDjango
-walmart_challenge/**/__pycache__/
+*/envDjango
+*/**/__pycache__/
